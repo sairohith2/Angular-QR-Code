@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { QrcodeComponent } from './qrcode/qrcode.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { FormsModule } from '@angular/forms';
+import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QrcodeComponent
+    QrcodeComponent,
+    TestingComponent
   ],
   imports: [
     BrowserModule,

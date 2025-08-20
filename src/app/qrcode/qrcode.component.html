@@ -1,0 +1,11 @@
+<div style="text-align: center; margin-top: 50px;">
+    <h1>QR Code Generator</h1>
+
+    <input type="text" [(ngModel)]="qrData" placeholder="Enter text to generate QR Code" style="padding: 10px;; width: 300px;"/>
+
+    <div *ngIf="qrData" style="margin-top: 20px;" #qrCodeElement>
+        <qrcode [qrdata]="qrData" [width]="250" [errorCorrectionLevel]="'M'"></qrcode>
+        <br>
+        <button (click)="downloadQRCode()" style="margin-top: 10px;">Download QR</button>
+    </div>
+</div>

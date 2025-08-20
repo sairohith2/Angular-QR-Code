@@ -6,7 +6,6 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./qrcode.component.css']
 })
 export class QrcodeComponent {
-
   qrData: string = ''; // user input text
   @ViewChild('qrCodeElement', {static: false}) qrCodeElement: any;
 

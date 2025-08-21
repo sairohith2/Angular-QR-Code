@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TestingQRComponent } from './testing-qr.component';
+import { ScannerComponent } from './scanner.component';
 
-describe('TestingQRComponent', () => {
-  let component: TestingQRComponent;
-  let fixture: ComponentFixture<TestingQRComponent>;
+describe('ScannerComponent', () => {
+  let component: ScannerComponent;
+  let fixture: ComponentFixture<ScannerComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestingQRComponent]
+      declarations: [ScannerComponent]
     });
-    fixture = TestBed.createComponent(TestingQRComponent);
+    fixture = TestBed.createComponent(ScannerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

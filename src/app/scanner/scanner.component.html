@@ -1,0 +1,47 @@
+<div style="text-align: center; margin-top: 20px;">
+<h1> QR Code Scanner </h1>
+
+ <!-- Scanner -->
+ <!-- <ngx-scanner-qrcode
+  (event)="onScanSuccess($event)"
+  [isAuto]="true"
+  style="width:300px; height:300px; display:block; margin:auto;">
+</ngx-scanner-qrcode> -->
+<ngx-scanner-qrcode
+    #scanner
+    (event)="onScanSuccess($event)"
+    style="width:300px; height:300px;  border-radius:8px;">
+  </ngx-scanner-qrcode>
+ 
+<div style="margin-top:10px;">
+  <button (click)="scanner.play()">Start Camera</button>
+  <button (click)="scanner.pause()">Pause Camera</button>
+  <button (click)="scanner.playDevice('1')">Switch Camera</button>
+  <button (click)="scanner.stop()">Stop Camera</button>
+</div>
+
+  <!-- Result display: -->
+  <div style="min-width:250px; border:1px solid #ccc; padding:10px; border-radius:8px;">
+    <h3>Decoded Result</h3>
+
+    <!-- If Result exists -->
+     <ng-container *ngIf="qrResult; else noData">
+
+      <!-- If it's a link -->
+      <a *ngIf="isUrl; else plainText" [href]="qrResult" target="_blank" rel="noopener">
+        {{ qrResult }}
+      </a>
+
+      <!-- Otherwise just show text -->
+      <ng-template #plainText>
+        <p>{{ qrResult }}</p>
+      </ng-template>
+    </ng-container>
+
+     <!-- No scan yet -->
+    <ng-template #noData>
+      <p style="color:#666;">No QR scanned yet...</p>
+    </ng-template>
+
+  </div>
+</div>

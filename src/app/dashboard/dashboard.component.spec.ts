@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TestingQRComponent } from './testing-qr.component';
+import { DashboardComponent } from './dashboard.component';
 
-describe('TestingQRComponent', () => {
-  let component: TestingQRComponent;
-  let fixture: ComponentFixture<TestingQRComponent>;
+describe('DashboardComponent', () => {
+  let component: DashboardComponent;
+  let fixture: ComponentFixture<DashboardComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestingQRComponent]
+      declarations: [DashboardComponent]
     });
-    fixture = TestBed.createComponent(TestingQRComponent);
+    fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

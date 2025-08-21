@@ -8,12 +8,16 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { FormsModule } from '@angular/forms';
 import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
 import { ScannerComponent } from './scanner/scanner.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QrcodeComponent,
-    ScannerComponent
+    ScannerComponent,
+    SidebarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
